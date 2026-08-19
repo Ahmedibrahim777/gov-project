@@ -1,0 +1,32 @@
+#dashboard-page {
+  min-height: 100vh;
+  background: var(--sand-100);
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 26px 30px 60px;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .sidebar-backdrop.show {
+    display: block;
+    position: fixed;
+    inset: 68px 0 0 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 25;
+  }
+  .main-content {
+    padding: 20px 16px 50px;
+  }
+}

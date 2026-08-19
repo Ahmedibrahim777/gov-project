@@ -1,0 +1,87 @@
+:root {
+  --teal-950: #06201a;
+  --teal-900: #0b3a2e;
+  --teal-800: #0f4d3c;
+  --teal-700: #146349;
+  --teal-600: #1b7a57;
+  --gold-600: #b4892e;
+  --gold-500: #c9a03d;
+  --gold-400: #ddbe68;
+  --gold-100: #f3e7c8;
+  --sand-50: #f8f6f0;
+  --sand-100: #f1eee3;
+  --ink-900: #182420;
+  --ink-700: #3b4842;
+  --ink-500: #657069;
+  --red-flag: #c8102e;
+  --white: #ffffff;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-card: 0 10px 30px -12px rgba(6, 32, 26, 0.25);
+  --font-display: 'Cairo', sans-serif;
+  --font-body: 'Tajawal', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--sand-50);
+  color: var(--ink-900);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold-400);
+  color: var(--teal-950);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+.seal-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 15% 20%, rgba(201, 160, 61, 0.08) 0, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(201, 160, 61, 0.1) 0, transparent 45%),
+    repeating-conic-gradient(from 0deg, rgba(255, 255, 255, 0.02) 0deg 4deg, transparent 4deg 12deg);
+  pointer-events: none;
+}
+
+.fade-in {
+  animation: fadeUp 0.35s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
